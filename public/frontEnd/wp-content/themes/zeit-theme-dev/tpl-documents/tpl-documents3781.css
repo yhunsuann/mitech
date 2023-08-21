@@ -1,0 +1,117 @@
+.product-list-filters {
+  padding-top: 7.21951rem; }
+
+.filters .accordion-body {
+  padding-top: 0.97561rem;
+  padding-bottom: 0; }
+
+.filters .link-item {
+  display: block;
+  margin-top: 1.95122rem;
+  padding-left: 2.43902rem;
+  line-height: 1.95122rem;
+  position: relative; }
+  .filters .link-item::before {
+    content: '';
+    background-color: transparent;
+    border: 1px solid #80C1D1;
+    padding: 9px;
+    display: block;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+    position: absolute; }
+  .filters .link-item::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.95122rem;
+    height: 1.95122rem;
+    border: 5px solid #80C1D1;
+    border-radius: 3px; }
+  .filters .link-item.active::after {
+    display: block; }
+
+.filters .btn-secondary {
+  width: 100%;
+  margin-top: 1.56098rem; }
+
+.top-right-filter {
+  width: 75%; }
+
+.top-banner {
+  width: 100%;
+  height: 14.63415rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.46341rem; }
+  .top-banner .btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+
+.searchForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0.5px solid #C4C4C4;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2.2439rem;
+  border-radius: 4px;
+  margin-top: 3.41463rem; }
+  .searchForm input {
+    border: 0;
+    height: 5.17073rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 1.95122rem;
+    background-color: transparent; }
+
+.search-result {
+  font-size: 1.24878rem;
+  color: #909094;
+  margin-top: 0.78049rem; }
+
+.news-list.type-2 {
+  padding-top: 2.92683rem; }
+
+.download-section {
+  padding-bottom: 6.63415rem; }
+
+@media screen and (max-width: 1024px) {
+  .top-right-filter {
+    width: 100%; }
+  .top-banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 5vw; }
+    .top-banner .btn {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+  .dropdown-group {
+    grid-template-columns: 1fr; }
+    .dropdown-group .form-select {
+      margin-bottom: 1.95122rem; } }

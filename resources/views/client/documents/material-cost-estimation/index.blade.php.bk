@@ -1,0 +1,276 @@
+@extends('client.layouts.master') 
+
+@section('css-page')
+<link rel='stylesheet' id='tpl-calculation-css' href="{{ asset('frontEnd/wp-content/themes/zeit-theme-dev/tpl-calculation/tpl-calculation3781.css?ver=6.2.2') }}" type='text/css' media='all' />
+@endsection 
+
+@section('content')
+<input type="hidden" ng-init='tcxcpt = [{"id":1,"name":"Tr\u1ea7n ch\u00ecm X\u01b0\u01a1ng c\u00e1 Trung C\u1ea5p 3660mm","name_en":"V runner 3660mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":45000,"total_cost":0},{"id":2,"name":"Tr\u1ea7n ch\u00ecm Thanh C Trung C\u1ea5p 4000mm - ","name_en":"C runner 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":29000,"total_cost":0},{"id":3,"name":"Tr\u1ea7n ch\u00ecm Thanh g\u00f3c Trung C\u1ea5p 4000mm","name_en":"Angle perimeter 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":14000,"total_cost":0},{"id":4,"name":"B\u1ed9 T\u1eafc k\u00ea \u0111\u1ea1n","name_en":"Drop In Anchor D6","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":4000,"total_cost":0},{"id":5,"name":"B\u1ed9 \u1ed1c","name_en":"Nut and Washer D6","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":6,"name":"Ty r\u0103ng D6mm x 2000mm","name_en":"Threaded Rod D6mm x 2000mm","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":14000,"total_cost":0},{"id":7,"name":"T\u1ea5m Zeit Standard 9mm - 1220x1800mm","name_en":"Zeit Standard 9mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":78000,"total_cost":0},{"id":8,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":9,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":10,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='tcxccc = [{"id":1,"name":"Tr\u1ea7n ch\u00ecm X\u01b0\u01a1ng c\u00e1 Cao c\u1ea5p 3660mm","name_en":"V runner 3660mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":70000,"total_cost":0},{"id":2,"name":"Tr\u1ea7n ch\u00ecm Thanh C Cao c\u1ea5p 4000mm - ","name_en":"C runner 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":50000,"total_cost":0},{"id":3,"name":"Tr\u1ea7n ch\u00ecm Thanh g\u00f3c Cao c\u1ea5p 4000mm","name_en":"Angle perimeter 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":22000,"total_cost":0},{"id":4,"name":"B\u1ed9 T\u1eafc k\u00ea \u0111\u1ea1n","name_en":"Drop In Anchor D6","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":4000,"total_cost":0},{"id":5,"name":"B\u1ed9 \u1ed1c","name_en":"Nut and Washer D6","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":6,"name":"Ty r\u0103ng D6mm x 2000mm","name_en":"Threaded Rod D6mm x 2000mm","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":14000,"total_cost":0},{"id":7,"name":"T\u1ea5m Zeit Standard 9mm - 1220x1800mm","name_en":"Zeit Standard 9mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":78000,"total_cost":0},{"id":8,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":9,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":10,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='tcddpt = [{"id":1,"name":"Tr\u1ea7n ch\u00ecm Thanh C Trung c\u1ea5p 4000mm","name_en":"C runner 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":29000,"total_cost":0},{"id":2,"name":"Angle perimeter 4000m","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":14000,"total_cost":0},{"id":3,"name":"B\u1ed9 T\u1eafc k\u00ea n\u1edf","name_en":"Expansion Bolt","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":4,"name":"P\u00e1t treo","name_en":"Bolt Angle","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1000,"total_cost":0},{"id":5,"name":"Ty treo 4mm x 3000mm","name_en":"Suspension Rod 4mm x 3000mm","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":6000,"total_cost":0},{"id":6,"name":"T\u0103ng \u0111\u01a1","name_en":"Black Spring","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":2500,"total_cost":0},{"id":7,"name":"Kho\u00e1 li\u00ean k\u1ebft ","name_en":"Connect Clip","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":2000,"total_cost":0},{"id":8,"name":"T\u1ea5m Zeit Standard 9mm - 1220x1800mm","name_en":"Zeit Standard 9mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":78000,"total_cost":0},{"id":9,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":10,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":11,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='tcddcc = [{"id":1,"name":"Tr\u1ea7n ch\u00ecm Thanh C Cao c\u1ea5p 4000mm","name_en":"C runner 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":50000,"total_cost":0},{"id":2,"name":"Tr\u1ea7n ch\u00ecm Thanh g\u00f3c Cao c\u1ea5p 4000mm","name_en":"Angle perimeter 4000mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":22000,"total_cost":0},{"id":3,"name":"B\u1ed9 T\u1eafc k\u00ea n\u1edf","name_en":"Expansion Bolt","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":4,"name":"P\u00e1t treo","name_en":"Bolt Angle","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1000,"total_cost":0},{"id":5,"name":"Ty treo 4mm x 3000mm","name_en":"Suspension Rod 4mm x 3000mm","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":6000,"total_cost":0},{"id":6,"name":"T\u0103ng \u0111\u01a1","name_en":"Black Spring","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":2500,"total_cost":0},{"id":7,"name":"Kho\u00e1 li\u00ean k\u1ebft ","name_en":"Connect Clip","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":2000,"total_cost":0},{"id":8,"name":"T\u1ea5m Zeit Standard 9mm - 1220x1800mm","name_en":"Zeit Standard 9mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":78000,"total_cost":0},{"id":9,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":10,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":11,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='tnpt = [{"id":1,"name":"Tr\u1ea7n n\u1ed5i Thanh ch\u00ednh 3660mm","name_en":"Main T bar 3660mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":45000,"total_cost":0},{"id":1,"name":"Tr\u1ea7n n\u1ed5i Thanh ph\u1ee5 d\u00e0i 1220mm","name_en":"Long cross T bar 1220mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":14000,"total_cost":0},{"id":1,"name":"Tr\u1ea7n n\u1ed5i Thanh ph\u1ee5 ng\u1eafn 610mm","name_en":"Short cross T bar 610mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":7500,"total_cost":0},{"id":1,"name":"Tr\u1ea7n n\u1ed5i Thanh g\u00f3c 3660mm","name_en":"Angle perimeter 3660mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":34000,"total_cost":0},{"id":1,"name":"B\u1ed9 T\u1eafc k\u00ea n\u1edf","name_en":"Expansion Bolt","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":1,"name":"P\u00e1t treo","name_en":"Bolt Angle","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1000,"total_cost":0},{"id":1,"name":"Ty treo 4mm x 3000mm","name_en":"Suspension Rod 4mm x 3000mm","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":6000,"total_cost":0},{"id":1,"name":"T\u0103ng \u0111\u01a1 ","name_en":"Black Spring","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":2500,"total_cost":0},{"id":1,"name":"T\u1ea5m Zeit Tr\u1ea7n th\u1ea3 9mm - s\u01a1n tr\u1eafng 605x1210mm","name_en":"Zeit Ceiling Panels Drop 9mm - white paint 605x1210mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":30000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='vc = [{"id":1,"name":"_Thanh \u0111\u1ee9ng C75 - 3000mm X 0.45mm","name_en":"Zeit Eko Stud C75 - 3000mm X 0.45mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":67000,"total_cost":0},{"id":1,"name":"Thanh ngang U75 - 3000mm X 0.45mm","name_en":"Zeit Eko Stud U75 - 3000mm X 0.45mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":60000,"total_cost":0},{"id":1,"name":"B\u1ed9 T\u1eafc k\u00ea n\u1edf","name_en":"Expansion Bolt","unit":"each","quantity":0,"price":1500,"total_cost":0},{"id":1,"name":"T\u1ea5m Zeit Standard 12.5mm - 1220x1800mm","name_en":"Zeit Standard 12.5mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":120000,"total_cost":0},{"id":1,"name":"B\u00f4ng kho\u00e1ng 50mm x 40 kg\/m3","name_en":"Rockwool 50mm x 40 kg\/m3","unit":"M2","unit_en":"M2","quantity":0,"price":100000,"total_cost":0},{"id":1,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":1,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":1,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0},{"id":1,"name":"Ch\u1ea5t tr\u00e1m khe ch\u1ecbu l\u1eeda Silicon (310ml)","name_en":"Silicon Fire rated Sealant (310ml)","unit":"\u1ed0ng","unit_en":"each","quantity":0,"price":78000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='vcc1 = [{"id":1,"name":"Thanh \u0111\u1ee9ng C75 - 3000mm X 0.5mm","name_en":"Zeit Stud C75 - 3000mm X 0.5mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":79000,"total_cost":0},{"id":1,"name":"Thanh ngang U75 - 3000mm X 0.5mm","name_en":"Zeit Stud U75 - 3000mm X 0.5mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":70000,"total_cost":0},{"id":1,"name":"B\u1ed9 T\u1eafc k\u00ea n\u1edf","name_en":"Expansion Bolt","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":1,"name":"T\u1ea5m Zeit ch\u1ed1ng l\u1eeda 15mm - 1220x1800mm","name_en":"Zeit Fire Proof 15mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":218000,"total_cost":0},{"id":1,"name":"B\u00f4ng kho\u00e1ng 50mm x 40 kg\/m3","name_en":"Rockwool 50mm x 40 kg\/m3","unit":"M2","unit_en":"M2","quantity":0,"price":100000,"total_cost":0},{"id":1,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":1,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":1,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0},{"id":1,"name":"Ch\u1ea5t tr\u00e1m khe ch\u1ecbu l\u1eeda Silicon (310ml)","name_en":"Silicon Fire rated Sealant (310ml)","unit":"\u1ed0ng","unit_en":"each","quantity":0,"price":78000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init='vcc2 = [{"id":1,"name":"Thanh \u0111\u1ee9ng C75 - 3000mm X 0.5mm","name_en":"Zeit Stud C75 - 3000mm X 0.5mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":79000,"total_cost":0},{"id":2,"name":"Thanh ngang U75 - 3000mm X 0.5mm","name_en":"Zeit Stud U75 - 3000mm X 0.5mm","unit":"Thanh","unit_en":"pc(s)","quantity":0,"price":70000,"total_cost":0},{"id":3,"name":"B\u1ed9 T\u1eafc k\u00ea n\u1edf","name_en":"Expansion Bolt","unit":"C\u00e1i","unit_en":"each","quantity":0,"price":1500,"total_cost":0},{"id":4,"name":"T\u1ea5m Zeit ch\u1ed1ng l\u1eeda 12.5mm - 1220x1800mm","name_en":"Zeit Fire Proof 12.5mm - 1220x1800mm","unit":"T\u1ea5m","unit_en":"pc(s)","quantity":0,"price":175000,"total_cost":0},{"id":5,"name":"B\u00f4ng kho\u00e1ng 50mm x 40 kg\/m3","name_en":"Rockwool 50mm x 40 kg\/m3","unit":"M2","unit_en":"M2","quantity":0,"price":100000,"total_cost":0},{"id":6,"name":"V\u00edt th\u1ea1ch cao 25mm","name_en":"Gypfast Screws needle point 25mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":60000,"total_cost":0},{"id":7,"name":"V\u00edt th\u1ea1ch cao 32mm","name_en":"Gypfast Screws needle point 32mm","unit":"Kg","unit_en":"Kg","quantity":0,"price":62000,"total_cost":0},{"id":8,"name":"B\u1ed9t tr\u00e9t x\u1eed l\u00fd m\u1ed1i n\u1ed1i (20kg)","name_en":"Jointing compound (20kg)","unit":"Bao","unit_en":"each","quantity":0,"price":150000,"total_cost":0},{"id":9,"name":"B\u0103ng gi\u1ea5y 50mm x 50m","name_en":"Paper tape 50mm x 50m","unit":"Cu\u1ed9n","unit_en":"each","quantity":0,"price":80000,"total_cost":0},{"id":10,"name":"Ch\u1ea5t tr\u00e1m khe ch\u1ecbu l\u1eeda Silicon (310ml)","name_en":"Silicon Fire rated Sealant (310ml)","unit":"\u1ed0ng","unit_en":"each","quantity":0,"price":78000,"total_cost":0}];'
+/>
+<input type="hidden" ng-init="triggeredSearch = false" />
+<section class="estimation-sect has-cover-img" style="background-image: url('{{ asset('frontEnd/wp-content/themes/zeit-theme-dev/images/calculation.png') }}')">
+    <div class="container">
+        <div class="wrapper">
+            <div class="wrapper-form">
+                <div class="top wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="category text-uppercase">ƯỚC TÍNH</h6>
+                    <h3 class="heading-1 text-uppercase text-blue has-blue-underline">CHI PHÍ VẬT TƯ</h3>
+                </div>
+                <form action="https://zeitgypsum.com/calculation" class="estimate-form wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="groups" ng-init="est_opt = 1">
+                        <p class="type">Hạng mục thi công</p>
+                        <div class="inputs-group">
+                            <div class="form-group-checkbox">
+                                <input type="radio" value="1" id="estimate-bottom-ceil" ng-model="est_opt" checked ng-change="triggeredSearch = false" ng-class="est_opt == 1 ? 'active' : ''">
+                                <label for="estimate-bottom-ceil">Trần chìm</label>
+                            </div>
+                            <div class="form-group-checkbox">
+                                <input type="radio" value="2" id="estimate-top-ceil" ng-model="est_opt" ng-change="triggeredSearch = false" ng-class="est_opt == 2 ? 'active' : ''">
+                                <label for="estimate-top-ceil">Trần nổi</label>
+                            </div>
+                            <div class="form-group-checkbox">
+                                <input type="radio" value="3" id="estimate-wall" ng-model="est_opt" ng-change="triggeredSearch = false" ng-class="est_opt == 3 ? 'active' : ''">
+                                <label for="estimate-wall">Vách</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="groups">
+                        <p class="type">Phương cách</p>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link btn-tab active" id="estimate-dimension-tab" data-bs-toggle="tab" data-bs-target="#estimate-dimension" type="button" role="tab" aria-controls="estimate-dimension" aria-selected="true">Tính theo kích thước</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link btn-tab " id="estimate-area-tab" data-bs-toggle="tab" data-bs-target="#estimate-area" type="button" role="tab" aria-controls="estimate-area" aria-selected="false">Tính theo diện tích</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="estimate-dimension" role="tabpanel" aria-labelledby="estimate-dimension-tab">
+                                <div class="form-controls">
+                                    <div class="control-item">
+                                        <label for="estimate-length" class="type">Chiều dài(m):</label>
+                                        <input type="number" id="estimate-length" value="0" name="estimate-length" ng-model="length" ng-change="triggeredSearch = false" ng-init="length = 0">
+                                    </div>
+                                    <div class="control-item">
+                                        <label for="estimate-width" class="type">Chiều rộng(m):</label>
+                                        <input type="number" id="estimate-width" value="0" name="estimate-width" ng-model="width" ng-change="triggeredSearch = false" ng-init="width = 0">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="estimate-area" role="tabpanel" aria-labelledby="estimate-area-tab">
+                                <div class="form-controls">
+                                    <div class="control-item">
+                                        <label for="estimate-area-input" class="type">Diện tích(m2):</label>
+                                        <input type="number" id="estimate-area-input" name="estimate-area" ng-model="area" ng-change="setSize()" ng-init="area = 0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-submit has-brand-icon" ng-click="startCalculation()"><span>Ước tính chi phí</span></button>
+                </form>
+            </div>
+            <div class="content">
+                <h3 class="heading"><span>Ước tính chi phí vật tư</span> cùng MiTech để đưa ra lựa chọn tối ưu nhất cho trần và vách thạch cao trong ngôi nhà của bạn!</h3>
+                <p class="para"><span>Lưu ý:</span> Công thức ước tính chi phí vật tư này chỉ mang tính chất tham khảo và không thay thế hoàn toàn việc tính toán vật tư thực tế tại công trình. Vui lòng liên hệ đội ngũ kỹ thuật của MiTech để được tư vấn cụ thể qua
+                    tổng đài: <span class='hl-text'>(028) 3535 9295</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="estimate-result-sect wow fadeInUp" data-wow-delay="0.6s" ng-show="triggeredSearch == true">
+    <div class="container">
+        <div class="common-result">
+            <h3 class="heading-3 mb-4 text-uppercase">KẾT QUẢ ƯỚC TÍNH CHI PHÍ VẬT TƯ</h3>
+            <span class="filter-name filter-category">
+          <span class="text-blue">Hạng mục thi công:</span>
+            <span class="value" ng-show="est_opt == 1">Trần chìm</span>
+            <span class="value" ng-show="est_opt == 2">Trần nổi</span>
+            <span class="value" ng-show="est_opt == 3">Vách</span>
+            </span>
+            <span class="filter-name filter-width">
+          <span class="text-blue">Chiều dài(m):</span>
+            <span class="value">0</span>
+            </span>
+            <span class="filter-name filter-height">
+          <span class="text-blue">Chiều rộng(m):</span>
+            <span class="value">0</span>
+            </span>
+            <span class="filter-name filter-area">
+          <span class="text-blue">Diện tích (m2):</span>
+            <span class="value">0</span>
+            </span>
+        </div>
+        <p class="heading-3 mb-4">Tùy chỉnh giải pháp</p>
+        <div class="product-results">
+            <div class="advanced-filter">
+                <div ng-show="est_opt == 1">
+                    <label class="lbl text-blue">Chất lượng</label>
+                    <div class="switch">
+                        <div class="switch-field" ng-class='active'>
+                            <input id="tc-quality-1" type="radio" name="tc_q_opt" ng-model="tc_q_opt" value="1" ng-change="startCalculation()">
+                            <label for="tc-quality-1">Phổ Thông</label>
+                        </div>
+                        <div class="switch-field" ng-class="tc_q_opt == 2 ? 'active' : ''">
+                            <input id="tc-quality-2" type="radio" name="tc_q_opt" ng-model="tc_q_opt" value="2" ng-change="startCalculation()">
+                            <label for="tc-quality-2">Cao Cấp</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label class="lbl text-blue">Loại khung</label>
+                        <select class="form-select" ng-model="tc_t_opt" ng-options="opt.name for opt in type_options" ng-init="tc_t_opt = type_options[0]" ng-change="startCalculation()"></select>
+                    </div>
+                </div>
+
+                <div class="form-group full" ng-show="est_opt == 3">
+                    <label class="lbl text-blue">Tính năng</label>
+                    <select class="form-select" ng-model="v_opt" ng-options="opt.name for opt in vach_options" ng-init="v_opt = vach_options[0]" ng-change="startCalculation()"></select>
+                </div>
+            </div>
+
+            <div class="tbl-block">
+                <ul class="responsive-table">
+                    <li class="table-header">
+                        <div class="col t-col-1">Tên sản phẩm </div>
+                        <div class="col t-col-2">Đơn vị</div>
+                        <div class="col t-col-3">Sản lượng</div>
+                        <div class="col t-col-4">Giá thành *</div>
+                        <div class="col t-col-5">Thành Tiền</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                    <li class="table-row" ng-repeat="item in tcxcpt" ng-show="est_opt == 1 && tc_q_opt == 1 && tc_t_opt.value == 1">
+                        <div class="col t-col-1 text-black-4"><a class="name" href="#">Trần chìm Xương cá Trung Cấp 3660mm</a></div>
+                        <div class="col t-col-2 text-black-4">Thanh</div>
+                        <div class="col t-col-3 text-black-1">10.00</div>
+                        <div class="col t-col-4">45,000 VNĐ</div>
+                        <div class="col t-col-5">450,000 VNĐ</div>
+                    </li>
+                </ul>
+                <p class="text-blue text-small fst-italic mt-2"> * đơn vị việt nam đồng (VNĐ)</p>
+                <p class="price-total mt-5">Chi phí vật tư: <span class="heading-3 text-blue ms-5">2,802,500 VNĐ VNĐ</span></p>
+                <p class="price-total mt-5">Nhân công lắp đặt: <span class="heading-3 text-blue ms-5">1,500,000 VNĐ</span></p>
+                <p class="price-total mt-5">Tổng cộng: <span class="heading-3 text-blue ms-5">4,302,500 VNĐ</span></p>
+                <div class="content">
+                    <p class="para"><span>Lưu ý:</span> Công thức ước tính chi phí vật tư này chỉ mang tính chất tham khảo và không thay thế hoàn toàn việc tính toán vật tư thực tế tại công trình. Vui lòng liên hệ đội ngũ kỹ thuật của MiTech để được tư vấn cụ thể
+                        qua tổng đài: <span class='hl-text'>(028) 3535 9295</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="grid-nav-section wow fadeInUp">
+    <div class="wrapper">
+        <div class="left-col has-cover-img" style="background-image: url('{{ asset('frontEnd/wp-content/themes/zeit-theme-dev/images/bg-1.png') }}')">>
+            <h5 class="heading-1">Thư viện tài liệu phong phú của MiTech</h5>
+        </div>
+        <div class="right-col">
+            <a href="" class="item">
+                <h6 class="name">Giải đáp kỹ thuật <span class="icon-gear"></span></h6>
+                <div class="desc">
+                    <p>Hỗ trợ giải đáp các thắc mắc liên quan đến thạch cao.</p>
+                </div>
+            </a>
+            <a href=""  class="item">
+                <h6 class="name">Hướng dẫn thi công <span class="icon-tool"></span></h6>
+                <div class="desc">
+                    <p>Hướng dẫn thi công, lắp đặt tấm thạch cao đúng kỹ thuật.</p>
+                </div>
+            </a>
+            <a href="" class="item">
+                <h6 class="name">Nhận diện MiTech <span class="icon-information"></span></h6>
+                <div class="desc">
+                    <p>Phân biệt và nhận biết tấm thạch cao Zeit trên thị trường.</p>
+                </div>
+            </a>
+            <a href="" class="item">
+                <h6 class="name">Chính sách bảo hành <span class="icon-shield"></span></h6>
+                <div class="desc">
+                    <p>Chính sách 1-đổi-1, đảm bảo độ an tâm tin cậy cho gia chủ.</p>
+                </div>
+            </a>
+            <a href="" class="item">
+                <h6 class="name">Thư viện thạch cao <span class="icon-image"></span></h6>
+                <div class="desc">
+                    <p>Khám phá các mẫu trần thạch cao đẹp và thịnh hành,</p>
+                </div>
+            </a>
+            <a href="" class="item">
+                <h6 class="name">Tải tài liệu <span class="icon-download"></span></h6>
+                <div class="desc">
+                    <p>Tham khảo và tải các tài liệu mới nhất.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+</main>
+@endsection
+ 
+@section('js-page')
+<script type='text/javascript' src="asset('frontEnd/wp-content/themes/zeit-theme-dev/tpl-calculation/tpl-calculation3781.js?ver=6.2.2') }}" id='tpl-calculation-js'></script>
+@endsection

@@ -1,0 +1,310 @@
+.top-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1.95122rem 5vw 2.34146rem 1.95122rem;
+    background-color: #fbfbfb;
+}
+
+.top-filter .btn {
+    height: auto;
+    padding: 0;
+}
+
+.dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 0 -0.97561rem;
+}
+
+.list-map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.list-map .left-list {
+    width: 50%;
+    overflow: auto;
+    height: 100%;
+    padding: 1.95122rem;
+    max-width: 58.53659rem;
+}
+
+.list-map .left-list::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.list-map .left-list::-webkit-scrollbar {
+    width: 2px;
+    background-color: #fff;
+}
+
+.list-map .left-list::-webkit-scrollbar-thumb {
+    background-color: #CECED4;
+    border-radius: 3px;
+}
+
+.list-map .map {
+    width: 50%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.list-map .map .distributor-item {
+    border-radius: 4px;
+}
+
+.button-group-pills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.button-group-pills .btn-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.button-group-pills .btn-tab span {
+    border-radius: 4px;
+    height: 3.90244rem;
+    border: 1px solid #f3f3f3;
+    font-size: 1.24878rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #909094;
+    margin-right: 1.17073rem;
+    padding: 0 1.56098rem;
+    font-size: 1.56098rem;
+}
+
+.button-group-pills input[type="radio"] {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.button-group-pills input[type="radio"]:checked~span {
+    color: #00586E;
+    background: #E9FBFF;
+    border-color: #80C1D1;
+}
+
+.location-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.location-content .distributor-item:not(:first-child) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 1.56098rem;
+    border-top: 1px solid #F3F3F3;
+    margin-top: 1.17073rem;
+}
+
+.distributor-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.distributor-item .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-right: 1.95122rem;
+    font-size: 1.36585rem;
+}
+
+.distributor-item .thumb {
+    width: 10.92683rem;
+}
+
+.distributor-item .name {
+    font-size: 1.95122rem;
+    color: rgb(8, 81, 134);
+}
+
+.distributor-item .label-text {
+    color: #80C1D1;
+    font-size: 1.24878rem;
+}
+
+.distributor-item .info {
+    margin-top: 1.46341rem;
+}
+
+.distributor-item .info .btn {
+    color: rgb(8, 81, 134);
+    background-color: #FDFDFD;
+    font-size: 1.36585rem;
+}
+
+.distributor-item .info .btn:not(:last-child) {
+    margin-right: 1.17073rem;
+}
+
+.distributor-item .info .district-item {
+    background-color: #FDFDFD;
+    font-size: 1.24878rem;
+    color: #909094;
+    padding: 0.4878rem 0.97561rem;
+    border-radius: 4px;
+    margin-bottom: 0.97561rem;
+    margin-right: 0.97561rem;
+    display: none;
+}
+
+.distributor-item.installers-item .website,
+.distributor-item.installers-item .email,
+.distributor-item.dealers-item .website,
+.distributor-item.dealers-item .email {
+    display: none;
+}
+
+.distributor-item.distributors-item .districtsList,
+.distributor-item.distributors-item .region,
+.distributor-item.dealers-item .districtsList,
+.distributor-item.dealers-item .region {
+    display: none;
+}
+
+.distributor-item.installers-item .thumb,
+.distributor-item.installers-item .address {
+    display: none;
+}
+
+.location-list {
+    padding: 3.31707rem 0;
+}
+
+.form-group.hide {
+    display: none;
+}
+
+.gm-style .gm-style-iw-c {
+    border-radius: 4px;
+}
+
+.total-container {
+    font-size: 1.24878rem;
+    color: #909094;
+    margin-top: -0.97561rem;
+}
+
+.total-container .total {
+    color: #231F20;
+}
+
+.total-container .type {
+    color: #606060;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-container .form-title {
+    font-size: 2.34146rem;
+    color: #525255;
+    margin-bottom: 0.78049rem;
+}
+
+.form-container .desc {
+    padding-bottom: 4.68293rem;
+}
+
+.form-container .intro-text {
+    color: #7D7D7D;
+    text-align: left;
+    margin-bottom: 1.46341rem;
+}
+
+.form-container form {
+    text-align: left;
+    margin-top: 1.95122rem;
+}
+
+.form-container form .bottom {
+    margin-top: 1.95122rem;
+}
+
+.form-container .nav-tabs .nav-link.active {
+    background-color: rgb(8, 81, 134);
+    border-color: rgb(8, 81, 134);
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .top-filter {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .top-filter .button-group-pills {
+        margin-bottom: 3.41463rem;
+    }
+    .distributor-item .info .btn {
+        padding: 1.17073rem 0.78049rem;
+    }
+    .distributor-item .content {
+        padding-right: 0.97561rem;
+    }
+    .distributor-item .thumb {
+        width: 6.2439rem;
+    }
+    .list-map {
+        height: 100%;
+    }
+    .list-map .left-list {
+        width: 100%;
+    }
+    .list-map .map {
+        display: none;
+    }
+    .nav-tabs .btn-tab {
+        font-size: 1.36585rem;
+    }
+    .nav-tabs .btn-tab:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+.gm-style .gm-style-iw-t::after {
+    top: -2px;
+}

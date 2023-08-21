@@ -1,0 +1,74 @@
+.about-us-intro {
+  padding: 12rem 0 9.7561rem; }
+  .about-us-intro .category {
+    font-size: 1.95122rem; }
+
+.info {
+  padding-top: 7.80488rem;
+  padding-left: 9.7561rem;
+  max-width: 45.36585rem;
+  font-size: 1.95122rem;
+  font-family: "Roboto-Light", "sans-serif"; }
+  .info .item {
+    margin-bottom: 2.92683rem; }
+    .info .item p:first-child {
+      margin-bottom: 0.78049rem;
+      font-family: "Roboto", "sans-serif"; }
+    .info .item .social-media-icons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .info .item .social-media-icons .icon {
+        margin-right: 1.95122rem; }
+        .info .item .social-media-icons .icon:last-child {
+          margin-right: 0; }
+  .info .bottom {
+    padding-top: 2.73171rem;
+    border-top: 1px solid #80c1d1; }
+    .info .bottom p:first-child {
+      margin-bottom: 0.78049rem;
+      font-family: "Roboto", "sans-serif"; }
+
+.grid-nav-section {
+  padding: 0; }
+
+.form-sect {
+  padding: 8.4878rem 0 9.7561rem; }
+  .form-sect .heading-2 {
+    max-width: 80.09756rem;
+    margin: auto;
+    text-align: center; }
+  .form-sect .contact-form {
+    max-width: 64.39024rem;
+    margin: 7.80488rem auto; }
+  .form-sect .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 4.87805rem; }
+    .form-sect .bottom .btn {
+      margin-right: 1.95122rem; }
+    .form-sect .bottom span {
+      color: #909094; }
+      .form-sect .bottom span a {
+        text-decoration: underline; }
+        .form-sect .bottom span a:not(:hover) {
+          color: #909094; }
+
+@media screen and (max-width: 1024px) {
+  .info {
+    padding-left: 0;
+    padding-top: 3.90244rem; }
+    .info .item .social-media-icons .icon {
+      margin-right: 1.46341rem;
+      width: 3.41463rem; }
+      .info .item .social-media-icons .icon:last-child {
+        margin-right: 0; }
+  .form-sect .heading-2 {
+    padding-left: 0; }
+  .form-sect .contact-form {
+    max-width: none; } }
+  

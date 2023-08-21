@@ -1,0 +1,434 @@
+.main {
+    padding: 7.80488rem 0;
+}
+
+.top-news-sect {
+    margin-bottom: 7.80488rem;
+}
+
+.top-news-sect .top {
+    text-align: center;
+    padding: 13.46341rem 1.95122rem;
+    color: #fff;
+    background-color: rgb(8, 81, 134);
+    position: relative;
+}
+
+.main-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-bottom: 4.87805rem;
+}
+
+.main-title .left-col {
+    width: 25%;
+    font-size: 1.36585rem;
+}
+
+.main-title .right-col {
+    padding-left: 2.92683rem;
+    width: 65%;
+}
+
+.main-title .date {
+    color: #464648;
+}
+
+.main-title .title {
+    color: #00586E;
+}
+
+.main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 4.29268rem;
+}
+
+.main-content .socials-block {
+    width: 25%;
+    font-size: 1.36585rem;
+    color: #909094;
+}
+
+.main-content .socials {
+    font-size: 3.90244rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.main-content .socials .social-item {
+    margin-bottom: 1.17073rem;
+}
+
+.main-content .socials .social-item:not(:last-child) {
+    margin-right: 1.17073rem;
+}
+
+.main-content .right-col {
+    width: 65%;
+    padding-left: 2.92683rem;
+}
+
+.main-content .right-col h3 {
+    font-weight: bold;
+    font-size: 2.43902rem;
+    margin: 1.95122rem 0;
+}
+
+.main-content .right-col strong {
+    font-weight: bold !important;
+}
+
+.main-content .right-col em {
+    font-style: italic;
+}
+
+.news-list {
+    padding-top: 1.95122rem;
+}
+
+.related-news-sect {
+    padding-top: 9.36585rem;
+}
+
+.related-news-sect .news-list.type-2 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.right-col .btn-detail {
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 1.95122rem;
+}
+
+.modal-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal-form.showForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.modal-form.showForm .wrapper {
+    -webkit-animation: showForm .6s forwards ease;
+    animation: showForm .6s forwards ease;
+}
+
+.modal-form .wrapper {
+    width: 78.04878rem;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.modal-form .wrapper .form-csbh {
+    position: relative;
+    padding: 3.90244rem;
+}
+
+.modal-form .wrapper .form-csbh .icon-close {
+    position: absolute;
+    right: 1.95122rem;
+    top: 1.95122rem;
+    cursor: pointer;
+}
+
+.modal-form .wrapper .form-csbh .title {
+    text-align: center;
+    margin-bottom: 3.90244rem;
+}
+
+.modal-form .wrapper .form-csbh .group-input {
+    width: 100%;
+    margin: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.modal-form .wrapper .form-csbh .group-input:last-child {
+    margin-bottom: 0;
+}
+
+.modal-form .wrapper .form-csbh .group-input .input-item {
+    width: 49%;
+}
+
+.modal-form .wrapper .form-csbh .group-input.full-width .input-item {
+    width: 100%;
+}
+
+.modal-form .wrapper .form-csbh .btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        padding: 4.87805rem 0 0;
+    }
+    .main-title {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .main-title .left-col,
+    .main-title .right-col {
+        width: 100%;
+        padding: 0;
+    }
+    .main-title .right-col {
+        margin-top: 2.34146rem;
+    }
+    .main-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .main-content .socials-block,
+    .main-content .right-col {
+        width: 100%;
+        padding: 0;
+    }
+    .main-content .right-col {
+        margin-top: 2.34146rem;
+    }
+    .related-news-sect .news-list.type-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .modal-form .wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .related-news-sect .news-list.type-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.success-message {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 7.80488rem;
+    opacity: 0;
+}
+
+.success-message .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    max-width: 29.26829rem;
+    margin: 0 auto;
+    padding: 0.97561rem 0;
+    border-radius: 0.4878rem;
+    border: 0.09756rem solid #909094;
+}
+
+.success-message i {
+    color: #35c27b;
+}
+
+.success-message .title-message {
+    margin-left: 0.97561rem;
+}
+
+.success-message.showing {
+    display: block;
+    -webkit-animation: showMessage 0.5s 0.3s forwards ease;
+    animation: showMessage 0.5s 0.3s forwards ease;
+}
+
+.product-list-filters {
+    padding-top: 7.21951rem;
+}
+
+.top-right-filter {
+    width: 100%;
+}
+
+.wrapper-form {
+    max-width: 86.2439rem;
+    margin: 7.41463rem auto 0;
+}
+
+.wrapper-form .content {
+    margin-bottom: 6.53659rem;
+}
+
+.wrapper-form .form-csbh .group-input {
+    width: 100%;
+    margin: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.wrapper-form .form-csbh .group-input:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper-form .form-csbh .group-input .input-item {
+    width: 49%;
+}
+
+.wrapper-form .form-csbh .group-input.full-width .input-item {
+    width: 100%;
+}
+
+.wrapper-form .form-csbh .btn {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.top-banner {
+    width: 100%;
+    height: 14.63415rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.46341rem;
+}
+
+.download-section {
+    padding-bottom: 6.63415rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .top-right-filter {
+        width: 100%;
+    }
+    .top-banner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 5vw;
+    }
+    .top-banner .btn {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    .dropdown-group {
+        grid-template-columns: 1fr;
+    }
+    .dropdown-group .form-select {
+        margin-bottom: 1.95122rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper-form .form-csbh {
+        width: 100%;
+    }
+    .wrapper-form .form-csbh .group-input .input-item {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .wrapper-form .form-csbh .group-input .input-item:last-child {
+        margin-bottom: 0;
+    }
+    .modal-form .wrapper .form-csbh {
+        padding: 3.90244rem 1.95122rem;
+        height: 100%;
+        overflow: auto;
+    }
+    .modal-form .wrapper .form-csbh .group-input {
+        margin-bottom: 0;
+    }
+    .modal-form .wrapper .form-csbh .group-input .input-item {
+        width: 100%;
+        margin-bottom: 2.92683rem;
+    }
+}
+
+@-webkit-keyframes showForm {
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes showForm {
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes showMessage {
+    from {
+        opacity: 0;
+        top: 7.80488rem;
+    }
+    to {
+        opacity: 1;
+        top: 8.78049rem;
+        visibility: visible;
+    }
+}
+
+@keyframes showMessage {
+    from {
+        opacity: 0;
+        top: 7.80488rem;
+    }
+    to {
+        opacity: 1;
+        top: 8.78049rem;
+        visibility: visible;
+    }
+}

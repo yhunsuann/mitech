@@ -1,0 +1,227 @@
+.product-list-filters {
+    padding-top: 7.21951rem;
+}
+
+.filters .accordion-body {
+    padding-top: 0.97561rem;
+    padding-bottom: 0;
+}
+
+.filters .link-item {
+    display: block;
+    margin-top: 1.95122rem;
+    padding-left: 2.43902rem;
+    line-height: 1.95122rem;
+    position: relative;
+}
+
+.filters .link-item::before {
+    content: '';
+    background-color: transparent;
+    border: 1px solid #80C1D1;
+    padding: 9px;
+    display: block;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.filters .link-item::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.95122rem;
+    height: 1.95122rem;
+    border: 5px solid #80C1D1;
+    border-radius: 3px;
+}
+
+.filters .link-item.active::after {
+    display: block;
+}
+
+.filters .btn-secondary {
+    width: 100%;
+    margin-top: 1.56098rem;
+}
+
+.top-right-filter {
+    width: 75%;
+}
+
+.top-banner {
+    width: 100%;
+    height: 14.63415rem;
+    padding-left: 5vw;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1.46341rem;
+}
+
+.responsive-table {
+    padding: 3.21951rem 0 2.92683rem;
+}
+
+.responsive-table li {
+    padding: 1.17073rem 1.95122rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 1.36585rem;
+    text-align: center;
+}
+
+.responsive-table li:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+.responsive-table .table-header {
+    background-color: rgb(8, 81, 134);
+    color: #fff;
+}
+
+.responsive-table .table-header .col:not(:last-child) {
+    border-right: 1px solid rgba(241, 241, 241, 0.2);
+}
+
+.responsive-table .table-row {
+    background-color: #fff;
+    white-space: nowrap;
+}
+
+.responsive-table .table-row .col:not(:last-child) {
+    position: relative;
+}
+
+.responsive-table .table-row .col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1.17073rem;
+    display: block;
+    height: calc(100% + 24px);
+    width: 1px;
+    background-color: #fff;
+}
+
+.responsive-table .t-col-1 {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+}
+
+.responsive-table .t-col-2 {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+}
+
+.responsive-table .t-col-3 {
+    -ms-flex-preferred-size: 15%;
+    flex-basis: 15%;
+}
+
+.responsive-table .t-col-4 {
+    -ms-flex-preferred-size: 15%;
+    flex-basis: 15%;
+}
+
+.responsive-table .btn-download {
+    padding: 0;
+    height: auto;
+    text-decoration: underline;
+    color: #909094;
+    font-size: 1.36585rem;
+    padding-bottom: 0.4878rem;
+}
+
+.responsive-table .table-row .t-col-1,
+.responsive-table .table-header .t-col-1 {
+    text-align: left;
+    white-space: normal;
+}
+
+.responsive-table .table-row .t-col-4,
+.responsive-table .table-header .t-col-4 {
+    text-align: right;
+}
+
+.responsive-table .table-row .t-col-1 {
+    padding-left: 2.53659rem;
+    position: relative;
+}
+
+.responsive-table .table-row .t-col-1:before {
+    font-family: "icomoon";
+    content: "\e906";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    font-size: 1.56098rem;
+    line-height: 1;
+}
+
+.responsive-table .capacity {
+    font-family: "Roboto", "sans-serif";
+    color: #909094;
+    font-size: 1.24878rem;
+}
+
+.dropdown-group {
+    grid-template-columns: 1fr 2fr;
+}
+
+.form-select {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.searchForm {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .top-right-filter {
+        width: 100%;
+    }
+    .dropdown-group {
+        grid-template-columns: 1fr;
+    }
+    .dropdown-group .form-select {
+        margin-bottom: 1.95122rem;
+        padding-bottom: 1.46341rem;
+    }
+    .responsive-table .t-col-2 {
+        display: none;
+    }
+    .product-list-sect {
+        padding-bottom: 7.80488rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .responsive-table .t-col-3 {
+        display: none;
+    }
+    .responsive-table .t-col-3:last-child {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .responsive-table .table-row .t-col-1 {
+        white-space: break-spaces;
+    }
+}
